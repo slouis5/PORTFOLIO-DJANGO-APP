@@ -1,5 +1,7 @@
 from django.shortcuts import render, HttpResponse
+from .models import Company
 
 # Views
 def index(request):
-    return HttpResponse("Hello, world. You're in the home page of summary, the single app of the portfolio project.")
+    companies_logo = Company.objects.all()
+    return render(request, "summary/index.html", { 'companies': companies_logo, })
