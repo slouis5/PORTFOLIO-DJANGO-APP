@@ -5,21 +5,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="DATA, Analysis, Haiti">
-    <meta name="description" content="A DATA Analyst in Haïti">
-    <meta name="author" content="Serginau LOUIS">
-	<!-- <link href="{% static "css/base.css" %}" rel="stylesheet" /> <link
+    <meta name="keywords" content="DATA, Analysis, Haiti" />
+    <meta name="description" content="A DATA Analyst in Haïti" />
+    <meta name="author" content="Serginau LOUIS" />
+    <!--  <link href="{% static "css/base.css" %}" rel="stylesheet" /> <link
 		rel="icon" href="{% static "img/Kanari_white_logo.png" %}"
-		type="image/icon" /> -->
+		type="image/icon" />  -->
 
-    <title>
-      Serginau's Portal
-    </title>
+    <title>Serginau's Portal</title>
   </head>
   <body>
-    <header>
-      Welcome to this empty header
-    </header>
+    <header>Welcome to this empty header</header>
     <nav>
       <ul>
         <li>
@@ -39,14 +35,14 @@
         </li>
       </ul>
     </nav>
-
-	<aside>
-		{% for company in companies %}
-		<img src="{{ company.logo_local.url }}" alt="logo" height="100px">
-		{% endfor %}
-	</aside>
-	<footer>
-			Copyright &copy; 2024 Serginau LOUIS
-	</footer>
+    <main>
+      
+    </main>
+    <aside>
+      {% for company in companies %}
+        <img src="{{ company.logo_local.url }}" alt="logo" height="100px" />
+      {% endfor %}
+    </aside>
+    <footer>Copyright &copy; 2024 Serginau LOUIS</footer>
   </body>
 </html>

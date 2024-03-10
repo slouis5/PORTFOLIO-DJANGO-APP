@@ -18,7 +18,7 @@ class StrengthAdmin(admin.ModelAdmin):
 
 @admin.register(Education)
 class EducationAdmin(admin.ModelAdmin):
-    list_display = ['school_name', 'title', 'period_start', 'period_end', ]
+    list_display = ['school_name', 'sigle', 'title', 'period_start', 'period_end', ]
 
 @admin.register(CertificationProvider)
 class CertificationProviderAdmin(admin.ModelAdmin):
@@ -43,4 +43,8 @@ class LanguageAdmin(admin.ModelAdmin):
 @admin.register(Experience)
 class ExperienceAdmin(admin.ModelAdmin):
     list_display = ['title', 'period_start', ]
+
+@admin.register(Project)
+class ProjectAdmin(admin.ModelAdmin):
+    list_display = ['title', 'desc', 'period_end', 'is_programming_proj', ]
 
