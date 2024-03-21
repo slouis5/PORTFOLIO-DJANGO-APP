@@ -48,3 +48,11 @@ class ExperienceAdmin(admin.ModelAdmin):
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ['title', 'desc', 'period_end', 'is_programming_proj', ]
 
+@admin.register(Service)
+class ProjectAdmin(admin.ModelAdmin):
+    list_display = ['name',]
+
+@admin.register(Social)
+class ProjectAdmin(admin.ModelAdmin):
+    list_display = ['name', 'url', ]
+

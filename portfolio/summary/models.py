@@ -189,3 +189,20 @@ class Project(models.Model):
 
     def __str__(self,):
         return self.title
+    
+
+# models for footer
+    
+class Service(models.Model):
+    name = models.CharField(max_length=80)
+
+    def __str__(self,):
+        return self.name
+
+class Social(models.Model):
+    name = models.CharField(max_length=30)
+    url = models.URLField()
+    icon = models.FileField(upload_to='social/', validators=[FileExtensionValidator(['png', 'svg'])])
+
+    def __str__(self,):
+        return self.name

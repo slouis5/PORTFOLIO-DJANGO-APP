@@ -8,41 +8,92 @@
     <meta name="keywords" content="DATA, Analysis, Haiti" />
     <meta name="description" content="A DATA Analyst in Haïti" />
     <meta name="author" content="Serginau LOUIS" />
-    <!--  <link href="{% static "css/base.css" %}" rel="stylesheet" /> <link
-		rel="icon" href="{% static "img/Kanari_white_logo.png" %}"
-		type="image/icon" />  -->
+    <link rel="stylesheet" href="{% static 'summary/css/style.css' %}" />
+
+    <!-- <link rel="icon" href="{% static 'img/Kanari_white_logo.png' %}" type="image/icon" /> -->
 
     <title>Serginau's Portal</title>
   </head>
   <body>
-    <header>Welcome to this empty header</header>
-    <nav>
-      <ul>
-        <li>
-          <a href="">Skills</a>
-        </li>
+    <script src="{% static 'summary/js/index.js' %}"></script>
+    <header>
+      <div class="flex-container-1">
+        <div class="flex-container-1-child">
+          <h1>Serginau<br /> LOUIS</h1>
+        </div>
+        <div class="flex-container-1-child">
+          <nav>
+            <ul>
+              <li>
+                <a href="">Skills</a>
+              </li>
 
-        <li>
-          <a href="">Experiences</a>
-        </li>
+              <li>
+                <a href="">Experiences</a>
+              </li>
 
-        <li>
-          <a href="">Projets</a>
-        </li>
+              <li>
+                <a href="">Projets</a>
+              </li>
 
-        <li>
-          <a href="">Get in touch</a>
-        </li>
-      </ul>
-    </nav>
-    <main>
-      
-    </main>
-    <aside>
-      {% for company in companies %}
-        <img src="{{ company.logo_local.url }}" alt="logo" height="100px" />
-      {% endfor %}
-    </aside>
-    <footer>Copyright &copy; 2024 Serginau LOUIS</footer>
+              <li>
+                <a href="">Get in touch</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div id="main" class="flex-container-2">
+      <article class="flex-container-2-child">
+        <h2>Who is Serge ?</h2>{{ about.about }}
+      </article>
+      <aside class="flex-container-2-child">
+        {% for skill_cat in skills_categories %}
+          <div class="skill_cat_container">
+            <div class="skill_cat_container-title">
+              <h2>{{ skill_cat.name }}</h2>
+            </div>
+            <div>
+              <img src="{{ skill_cat.icon.url }}" alt="skill_icon" height="500px" />
+            </div>
+          </div>
+        {% endfor %}
+      </aside>
+    </div>
+    <footer>
+      <div id="company_band">
+        {% for company in companies %}
+          <img src="{{ company.logo_local.url }}" alt="logo" />
+        {% endfor %}
+      </div>
+      <div class="flex-container-2">
+        <div class="flex-container-2-child">
+          <h3>Services</h3>
+          <ul>
+            {% for service in services %}
+              <li>{{ service.name }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="flex-container-2-child">
+          <h3>Social</h3>
+          <ul>
+            {% for social in socials %}
+              <li class="footer-social_li">
+                <a href="{{ service.url }}"><img src="{{ social.icon.url }}" alt="{{ social.name }}_icon" />{{ social.name }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="flex-container-2-child">
+          <h3>Want a collaboration on a Project idea ?</h3>
+
+          <a href="mailto:serginaulouis@gmail.com"><button>Email me !!!</button></a>
+        </div>
+      </div>
+
+      <p>Copyright &copy; 2024 Serginau LOUIS</p>
+    </footer>
   </body>
 </html>

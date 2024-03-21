@@ -1,0 +1,247 @@
+body {
+    background-color: rgba(237, 244, 245, .90);
+    margin: 0;
+    padding: 0;
+    /*
+    background-image: url('./images/bg.svg');
+    background-size: cover;
+    */
+}
+
+
+header {
+    padding: 2% 10% 5px 10%;
+    margin: 0 0 5px 0;
+    background-color: rgba(61, 61, 114, .98);
+}
+
+header h1 {
+    margin: 0;
+}
+
+/*full block */
+.flex-container-1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-content: stretch;
+}
+
+.flex-container-1-child {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+
+nav {
+    align-items: baseline;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    /* Remove default margin */
+    text-align: right;
+    /* Align navigation to the right */
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+    font-size: 1.5em;
+
+    /* Add margin to separate navigation links */
+}
+
+nav ul li a:hover {
+    color: rgb(11, 22, 59);
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+    /* Remove margin for the first navigation link */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 1s ease
+}
+
+
+#main {
+
+    margin: 5% 20% 5% 20%;
+    padding: 0;
+    background: rgb(61, 61, 114);
+    background: linear-gradient(180deg, rgba(61, 61, 114, 1) 0%, rgba(61, 61, 114, 1) 13%, rgba(0, 0, 0, 0));
+}
+
+/*
+aside {
+    background-color: white;
+}
+*/
+
+.flex-container-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+}
+
+.flex-container-2-child {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.skill_cat_container-title {
+    text-align: center;
+    animation: ease-in 1s;
+}
+
+footer {
+    overflow: hidden;
+    padding: 5px 20% 5px 20%;
+    background-color: rgba(61, 61, 114, .99);
+}
+
+footer p {
+    text-align: center;
+
+}
+
+footer .flex-container-2-child {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: flex-start;
+    order: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+footer li img {
+    height: 1em;
+}
+
+/*
+footer li.footer-social_li {
+    display: inline-flex;
+    
+
+}
+*/
+footer a {
+    color: black;
+    text-decoration-line: none;
+}
+
+footer button {
+    width: 30%;
+    height: 3em;
+    background-color: rgb(61, 61, 114);
+}
+
+#company_band {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    padding-top: 10px;
+    /* Ajustez la durée selon vos besoins */
+}
+
+#company_band img {
+    width: auto;
+    /* Ajustez la taille de l'image selon vos besoins */
+    height: 100px;
+    margin-right: 50px;
+
+    /* Espace entre les images */
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-150%);
+    }
+}
+
+/*
+
+p {
+    color: green;
+}
+
+;
+
+article {
+    width: 60%;
+}
+
+aside {
+    width: 40%;
+    align-self: right;
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+    background-color: white;
+}
+
+.skill_cat_container {
+    width: 50%;
+    display: none;
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Add styles for animation  
+.skill_cat_container-title {
+    text-align: center;
+}
+
+
+footer {
+    padding-bottom: 5%;
+}
+
+/* doesnt work on this css file but in html template, yes 
+#company_band {
+    height: 30px;
+    width: auto;
+    display: block;
+}
+/*
+
+*/
