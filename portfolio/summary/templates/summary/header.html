@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+{% block header %}
+<header>
+    <div class="flex-container-1">
+      <div class="flex-container-1-child">
+        <h1>Serginau<br /> LOUIS</h1>
+      </div>
+      <div class="flex-container-1-child">
+        <nav>
+          <ul>
+            <li>
+              <a href="">Skills</a>
+            </li>
+
+            <li>
+              <a href="{% url 'experiences' %}">Experiences</a>
+            </li>
+
+            <li>
+              <a href="">Projets</a>
+            </li>
+
+            <li>
+              <a href="">Get in touch</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  {% endblock header %}
+
+</body>
+</html>

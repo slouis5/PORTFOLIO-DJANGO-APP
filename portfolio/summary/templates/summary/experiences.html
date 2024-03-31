@@ -1,0 +1,44 @@
+{% extends 'summary/index.html' %}
+{% load static %}
+{% block css %}
+  <link rel="stylesheet" href="{% static 'summary/css/experiences.css' %}" />
+  <link rel="stylesheet" href="{% static 'summary/css/style.css' %}" />
+{% endblock %}
+
+{% block title %}
+  <title>Work experience</title>
+{% endblock %}
+
+{% block js %}
+  <script src="{% static 'summary/js/index.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+  {% for exp in experiences %}
+    <div class="section">
+      <div class="section-container-1-child-1">
+        <div class="section-container-1-child-1-child">
+          <span class="exp-title">{{ exp.title }}</span>
+        </div>
+
+        <div class="section-container-1-child-1-child">
+          <span class="exp-period">
+            {% if not exp.period_end %}
+              Since {{ exp.period_start }}
+            {% else %}
+              {{ exp.period_start }} - {{ exp.period_end }}
+            {% endif %}
+          </span>
+        </div>
+      </div>
+
+      <div class="section-container-1-child-2">
+        <div class="section-container-1-child-2-child">{{ exp.company }}</div>
+
+        {{ exp.desc }} <br />
+
+        {{ exp.is_last }} <br />
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}
